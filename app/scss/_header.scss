@@ -1,0 +1,40 @@
+.header {
+  nav {
+    padding: 24px;
+  }
+
+  &_logo {
+    img {
+      // margin-top: 10px;
+      margin-left: 50px;
+      margin-top: 5px;
+    }
+  }
+
+  &__menu {
+    > span {
+      display: block;
+      color: $grayLetters;
+      width: 26px;
+      height: 4px;
+      background-color: $orangeMe;
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &__links {
+      a {
+          font-size: $font-md;
+          margin-left: 15px;
+          color: $grayLetters;
+      }
+  }
+
+  &__cta {
+      font-size: $font-sm;
+    color: $lightLove;
+  }
+}
