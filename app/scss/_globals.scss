@@ -1,4 +1,4 @@
-@import "mixins";
+
 
 html {
     font-size: 100%;
@@ -19,9 +19,13 @@ body {
     line-height: 1.3;
 }
 
-a, a:visited, a:hover{
+a, a:visited {
     text-decoration: none;
+ 
+}
 
+a:hover {
+    color: #FF5E62;
 }
 
 //Flexbox
@@ -74,7 +78,7 @@ button, .button{
 
 //Pc
 .hide-for-desktop {
-    @include breakpoints-up(large){
+    @include breakpoint-up(large){
         display: none;
     }
 }

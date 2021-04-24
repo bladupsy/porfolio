@@ -1,14 +1,14 @@
 .header {
   nav {
-    padding: 24px;
+    padding: 1.0625rem 1.5rem ;
   }
 
   &_logo {
-    img {
-      // margin-top: 10px;
-      margin-left: 50px;
-      margin-top: 5px;
-    }
+    color:  #FF9966;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: -10px;
+    margin-left: 10px;
   }
 
   &__menu {
@@ -26,15 +26,59 @@
   }
 
   &__links {
+
+    
       a {
+          position: relative;
           font-size: $font-md;
-          margin-left: 15px;
+          margin-left: 25px;
           color: $grayLetters;
+          transition: color 200ms ease-in-out;
+          position: relative;
       }
+      
+      a::before {
+        content: "";
+        position: absolute;
+        height:  5px ;
+        display:  inline;
+        right: 0;
+        left: 0;
+        bottom: -30;
+        top: 20;
+        margin-top: 30px;
+        background: linear-gradient(to right, #FF9966, #FF5E62);
+       opacity: 0;
+       transition: opacity 200ms ease-in-out;
+       
+       
+      }
+      a:hover {
+        color: #FF9966;
+        &::before {
+          opacity: 1;
+        }
+
+      }
+
+
+      &:not(:last-child){
+        margin-right: 32px;
+      }
+      
+
   }
+
 
   &__cta {
       font-size: $font-sm;
-    color: $lightLove;
+      color: $lightLove;
+      transition: opacity 200ms ease-in-out;
+
+      &:hover{
+        color: aliceblue;
+        opacity: 0.85;
+      }
+
   }
 }
