@@ -1,0 +1,222 @@
+
+.about {
+    align-items: center;
+    display: flex;
+}
+.intro {
+    text-align: left;
+    margin: auto;
+    margin-top: 5%;
+    margin-right: 15%;
+    
+}
+
+.name {
+    width: 500px;
+    height: 260px;
+   
+    
+}
+
+.name-framework{
+    width: 500px;
+    height: 260px;
+    text-align: left;
+    margin: auto;
+    margin-top: -220px;
+    margin-bottom: 100px;
+    margin-right: 15%;
+}
+.image {
+    width: 400px;
+    height: 680px;
+    margin-left: 35%;
+    margin-top: 100px;
+    border-radius: 20px;
+    filter: drop-shadow(5px 5px 10px #444)
+}
+
+.icons-lin {
+    background-image: url('../img/linkeind.png');
+    background-size: cover;
+    width: 50px !important;
+    height: 50px !important;
+    border: none;
+    
+}
+.circle-background-about {
+    display: none;
+    
+    @media(min-width:768px){
+      height: 500px;
+      width: 500px;
+      background: linear-gradient(180deg,#FDD6BD, #F794A4);
+      position: absolute;
+      top: 480px;
+      right: 1050px;
+      z-index: -1;
+      border-radius: 50%;
+      display:block;
+    }
+  }
+
+  
+
+  
+  .circular-progress{
+    &,
+    &:before,
+    &:after{
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+    }
+    &:before,
+    &:after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+    }
+    margin: 20px;
+    position: relative;
+    &:before{
+      padding: .7em;
+      box-sizing: border-box;
+      font-size: 1.1rem;
+      line-height: 4rem;
+    }
+    &:after{
+      line-height: 8rem;
+    }
+  }
+  
+  @function progress($percent){
+    $deg: $percent/100 * 180;
+    @return #{$deg}deg;
+  }
+  
+  @mixin circular-progress($percent,$skill,$color,$bgcolor){
+    $progress: progress($percent);
+    
+    transform: rotate($progress);
+    background: linear-gradient(
+      0deg,
+      $color 50%,
+      rgba($color,.1) 50%
+    );
+    &:before,
+    &:after{
+      color: $color;
+    }
+    &:before{
+      content: "#{$skill}";
+      background: $bgcolor content-box;
+        text-transform: uppercase;
+      transform: rotate(-#{$progress});
+    }
+    &:after{
+      content: "#{$percent}%";
+      background: linear-gradient(
+        transparent 50%,
+        $bgcolor 100%
+      );
+      transform: scale(1.1) rotate(-#{$progress});
+    }
+  }
+  
+  .skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: flex-end;
+    height: 50vh;
+    margin: auto;
+    margin-top: -450px;
+    
+  }
+  .skills-two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: flex-end;
+    height: 50vh;
+    margin: auto;
+    margin-top: -320px;
+    
+  }
+  
+  .html{
+    @include circular-progress(
+      70,
+      html,
+      #FFC11E,
+      #fff
+      );
+  }
+  
+  .php{
+    @include circular-progress(
+      75,
+      php,
+      lighten(#117243,20%),
+      #fff
+      );
+  }
+  
+  .css{
+    @include circular-progress(
+      68,
+      css,
+      #2398AB,
+      #fff
+      );
+  }
+  
+  .js{
+    @include circular-progress(
+      50,
+      js,
+      #FF0000,
+      #fff
+      );
+  }
+  .laravel {
+      @include circular-progress(
+          60, 
+          Laravel, 
+          #E20338,
+          #fff
+           );
+  }
+  .react {
+    @include circular-progress(
+        50, 
+        react, 
+        #1771F1,
+        #fff
+         );
+}
+
+.sass {
+    @include circular-progress(
+        70, 
+        sass, 
+        #FF005C,
+        #fff
+         );
+}
+
+.angular {
+    @include circular-progress(
+        40, 
+        angular, 
+        #FF0000,
+        #fff
+         );
+}
+.btn-social-media{
+    display: flex;
+    align-items: center;
+
+}
