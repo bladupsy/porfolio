@@ -134,15 +134,18 @@ button, .button {
 .introduce .I-am {
   vertical-align: middle;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 10%;
   margin-left: 15%;
   margin-right: 50%;
   padding: auto;
 }
 .introduce .circle {
+  max-width: 100%;
+  height: auto;
   margin-right: 15%;
   float: right;
   padding: auto;
+  margin-bottom: 5%;
 }
 .introduce .header {
   margin-top: 8%;
@@ -224,12 +227,42 @@ button, .button {
   }
 }
 @media (max-width: 768px) {
+  .introduce .circle {
+    max-width: 50%;
+    height: auto;
+    margin-right: -1%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  .introduce .I-am {
+    font-size: 14px;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 35%;
+    margin-bottom: 25%;
+  }
+  .introduce .container-home {
+    margin-top: -15%;
+  }
   .introduce .waves {
-    height: 40px;
-    min-height: 40px;
+    height: 80px;
+    min-height: 200px;
+    margin-top: 2%;
   }
   .introduce .content {
     height: 30vh;
+  }
+  .introduce .header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, white 0%, white 0%);
+    color: #fe9972;
+  }
+  .introduce .inner-header {
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 
